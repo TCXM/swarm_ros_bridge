@@ -8,7 +8,7 @@
 ### list all <IPname: IP> here (IPname can be set arbitrarily) ###
 IP:
   self: '*'   # '*' stands for all self IPs
-  neighbor: 127.0.0.1 # modify to the IP of other machines
+  neighbor: 192.168.2.20 # modify to the IP of other machines
 
 ####### Send these ROS messages to remote robots #######
 ## if no send_topics needed, comment all these out

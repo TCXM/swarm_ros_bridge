@@ -31,6 +31,14 @@
 #define MSG_TYPE2 "nav_msgs/Odometry"
 #define MSG_CLASS2 nav_msgs::Odometry
 
+#include <std_msgs/String.h>
+#define MSG_TYPE3 "std_msgs/String"
+#define MSG_CLASS3 std_msgs::String
+
+#include <sensor_msgs/LaserScan.h>
+#define MSG_TYPE4 "sensor_msgs/LaserScan"
+#define MSG_CLASS4 sensor_msgs::LaserScan
+
 // #include <xxx/yy.h>
 // #define MSG_TYPE4 "xxx/yy"
 // #define MSG_CLASS4 xxx::yy
