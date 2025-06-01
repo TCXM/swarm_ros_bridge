@@ -23,17 +23,13 @@
 #define __ROS_SUB_PUB__
 #include <ros/ros.h>
 
-#include <sensor_msgs/Imu.h>
-#define MSG_TYPE1 "sensor_msgs/Imu"
-#define MSG_CLASS1 sensor_msgs::Imu
+#include <geometry_msgs/PoseStamped.h>
+#define MSG_TYPE1 "geometry_msgs/PoseStamped"
+#define MSG_CLASS1 geometry_msgs::PoseStamped
 
-#include <geometry_msgs/Twist.h>
-#define MSG_TYPE2 "geometry_msgs/Twist"
-#define MSG_CLASS2 geometry_msgs::Twist
-
-#include <std_msgs/String.h>
-#define MSG_TYPE3 "std_msgs/String"
-#define MSG_CLASS3 std_msgs::String
+#include <nav_msgs/Odometry.h>
+#define MSG_TYPE2 "nav_msgs/Odometry"
+#define MSG_CLASS2 nav_msgs::Odometry
 
 // #include <xxx/yy.h>
 // #define MSG_TYPE4 "xxx/yy"
