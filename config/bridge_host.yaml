@@ -8,9 +8,10 @@
 ### list all <IPname: IP> here (IPname can be set arbitrarily) ###
 IP:
   self: '*'   # '*' stands for all self IPs
-  robot1: 192.168.2.18
-  robot2: 192.168.2.19
-  robot3: 192.168.2.20
+  robot1: 192.168.3.18
+  robot2: 192.168.3.19
+  robot3: 192.168.3.20
+  robot4: 192.168.3.21
   test_local: 127.0.0.1 # just for local machine test
 
 ####### Send these ROS messages to remote robots #######
@@ -34,6 +35,12 @@ send_topics:
   srcIP: self # self IP
   srcPort: 3003 # ports of send_topics should be different
 
+- topic_name: /drone_4_planning/waypoint # send the messages of this ROS topic
+  msg_type: geometry_msgs/PoseStamped # ROS message type (rosmsg style)
+  max_freq: 50 # max sending frequency (Hz) int
+  srcIP: self # self IP
+  srcPort: 3004 # ports of send_topics should be different
+
 - topic_name: /drone_1_visual_slam/odom # send the messages of this ROS topic
   msg_type: nav_msgs/Odometry # ROS message type (rosmsg style)
   max_freq: 50 # max sending frequency (Hz) int
@@ -51,6 +58,12 @@ send_topics:
   max_freq: 50 # max sending frequency (Hz) int
   srcIP: self # self IP
   srcPort: 4003 # ports of send_topics should be different
+
+- topic_name: /drone_4_visual_slam/odom # send the messages of this ROS topic
+  msg_type: nav_msgs/Odometry # ROS message type (rosmsg style)
+  max_freq: 50 # max sending frequency (Hz) int
+  srcIP: self # self IP
+  srcPort: 4004 # ports of send_topics should be different
 
 ####### receive these ROS messages from remote robots #######
 ## if no recv_topics needed, comment all these out
