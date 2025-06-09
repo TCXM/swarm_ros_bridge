@@ -39,6 +39,10 @@
 #define MSG_TYPE4 "sensor_msgs/LaserScan"
 #define MSG_CLASS4 sensor_msgs::LaserScan
 
+#include <sensor_msgs/Image.h>
+#define MSG_TYPE5 "sensor_msgs/Image"
+#define MSG_CLASS5 sensor_msgs::Image
+
 // #include <xxx/yy.h>
 // #define MSG_TYPE4 "xxx/yy"
 // #define MSG_CLASS4 xxx::yy
