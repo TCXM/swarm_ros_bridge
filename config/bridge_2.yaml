@@ -14,7 +14,7 @@ IP:
 ####### Send these ROS messages to remote robots #######
 # if no send_topics needed, comment all these out
 send_topics:
-- topic_name: /odom # send the messages of this ROS topic
+- topic_name: /Odometry # send the messages of this ROS topic
   msg_type: nav_msgs/Odometry # ROS message type (rosmsg style)
   max_freq: 1 # max sending frequency (Hz) int
   srcIP: self # self IP
