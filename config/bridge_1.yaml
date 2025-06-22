@@ -8,14 +8,14 @@
 ### list all <IPname: IP> here (IPname can be set arbitrarily) ###
 IP:
   self: '*'   # '*' stands for all self IPs
-  host: 192.168.3.2
+  host: 192.168.17.101
   test_local: 127.0.0.1 # just for local machine test
 
 ####### Send these ROS messages to remote robots #######
 # if no send_topics needed, comment all these out
 send_topics:
-- topic_name: /camera/color/image_raw # send the messages of this ROS topic
-  msg_type: sensor_msgs/Image # ROS message type (rosmsg style)
+- topic_name: /odom # send the messages of this ROS topic
+  msg_type: nav_msgs/Odometry # ROS message type (rosmsg style)
   max_freq: 1 # max sending frequency (Hz) int
   srcIP: self # self IP
   srcPort: 5001 # ports of send_topics should be different
@@ -23,11 +23,6 @@ send_topics:
 ####### receive these ROS messages from remote robots #######
 ## if no recv_topics needed, comment all these out
 recv_topics:
-- topic_name: /odom # the received messages will be published in this topic
-  msg_type: nav_msgs/Odometry # ROS message type (rosmsg style)
-  srcIP: host # message source IPname
-  srcPort: 4001 # message source port
-
 - topic_name: /move_base_simple/goal # the received messages will be published in this topic
   msg_type: geometry_msgs/PoseStamped # ROS message type (rosmsg style)
   srcIP: host # message source IPname
